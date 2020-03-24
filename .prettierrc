@@ -1,0 +1,7 @@
+{
+  "printWidth": 100,
+  "parser": "babel",
+  "singleQuote": true,
+  "arrowParens": "avoid",
+  "trailingComma": "all"
+}

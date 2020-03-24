@@ -1,0 +1,7 @@
+node_modules
+.vscode
+build
+.idea
+.env
+/yarn-error.log
+public/build
