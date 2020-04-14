@@ -1,9 +1,9 @@
-<script>
-
+<script lang="ts">
+ const app: string = "app";
 </script>
 
 <main>
-    <h1>Svelte app</h1>
+    <h1>Svelte {app}</h1>
 </main>
 
 <style>

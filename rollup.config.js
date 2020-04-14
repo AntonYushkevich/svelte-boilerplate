@@ -21,7 +21,7 @@ const preprocess = sveltePreprocess({
 });
 
 export default {
-  input: 'src/main.js',
+  input: 'src/index.ts',
   output: {
     sourcemap: true,
     format: 'iife',
@@ -45,7 +45,7 @@ export default {
       preferBuiltins: true,
     }),
     builtins(),
-    commonjs(),
+    commonjs({ include: "node_modules/**", extensions: [".js", ".ts"] }),
     !production && serve({
       contentBase: 'public',
       path: 'src',
@@ -53,7 +53,7 @@ export default {
       historyApiFallback: true,
       port: 3000,
       proxy: {
-        api: 'http://localhost:8080'
+        // api: 'http://localhost:8080'
       }
     }),
     // Watch the `public` directory and refresh the
